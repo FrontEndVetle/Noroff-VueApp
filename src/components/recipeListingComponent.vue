@@ -3,10 +3,10 @@
     <div class="[col-sm-4]">
         <div class="[ card ]"></div>
         <div class="[ card-information ]">
-            Name:
-            Link:
-            Ingredients:
-            image:
+            Name: {{name}}
+            Link: {{link}}
+            Ingredients: {{ingredients}}
+            image: {{img}}
 
         </div>
     </div>
@@ -16,8 +16,6 @@
 <script>
 export default {
     name: 'Recepies',
-    props: {
-hello : String
-    }
+    props: ['name', 'link', 'intredients', 'img'],
 }
 </script>
