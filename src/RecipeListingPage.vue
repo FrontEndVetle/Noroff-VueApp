@@ -16,7 +16,7 @@ v-bind:img = "recipe.thumbnail"
 <script>
 import RecipeListingComponent from './components/RecipeListingComponent'
 export default {
-    name: 'RecipeListing',
+    name: 'RecipeListingComponent',
     components: {
     RecipeListingComponent
     },
@@ -37,7 +37,6 @@ export default {
     })
     .then(function(result){
         app.recipes = result;
-        console.log(result);
     })
     }
  }

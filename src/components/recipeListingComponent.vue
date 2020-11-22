@@ -1,15 +1,19 @@
 <template>
-    <div class="[ row ]">
-    <div class="[col-sm-4]">
-        <div class="[ card ]"></div>
-        <div class="[ card-information ]">
-            Name: {{name}}
-            Link: {{link}}
-            Ingredients: {{ingredients}}
-            image: {{img}}
+    <div class="col-sm-3">
+        <div class="card">
+            <img class="card-img" v-bind:src="thumbnail" alt="image of food">
+            <div class="card-body">
+                <h2>{{title}}</h2>
+                <ul>
+                    <li
+                        v-for="(ingredient, count) in ingredients"
+                        v-bind:key="count"
+                    >{{ingredient}}</li>
+                </ul>
 
+                <a v-bind:href="link">Click me</a>
+            </div>
         </div>
-    </div>
     </div>
 </template>
 
