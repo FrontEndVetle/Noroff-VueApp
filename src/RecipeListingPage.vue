@@ -15,30 +15,29 @@
     </div>
 </template>
 <script>
-import RecipeListingComponent from './components/RecipeListingComponent'
+import RecipeListingComponent from './components/RecipeListingComponent';
+
 export default {
-    name: 'RecipeListingComponent',
-    components: {
+  name: 'RecipeListingPage',
+  components: {
     RecipeListingComponent
-    },
-    data(){
-        return{
-            recipes:[]
-        }
-    },
-    beforeMount: function(){
-        const app = this;
-
-    const conversionUrl = 'https//cors-anywhere.herokuapp.com';
-    const url = 'http://www.recipepuppy.com/api/';
-
-    fetch(conversionUrl + url)
-    .then(function(response) {
-        return response.json
-    })
-    .then(function(result){
-        app.recipes = result;
-    })
+  },
+  data() {
+    return {
+        recipes: []
     }
- }
+  },
+  created() {
+      fetch("https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api")
+      .then(response => response.json())
+      .then(data => {
+          this.recipes = data.results;
+          for(let i = 0; i < this.recipes.length; i++) {
+              this.recipes[i].ingredients = this.recipes[i].ingredients.split(", ");
+          }
+      })
+  }
+}
 </script>
+
+
