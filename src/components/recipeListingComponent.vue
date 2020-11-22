@@ -15,7 +15,7 @@
 
 <script>
 export default {
-    name: 'Recepies',
-    props: ['name', 'link', 'intredients', 'img'],
+    name: 'RecipeListingComponent',
+    props: ['name', 'link', 'ingredients', 'img'],
 }
 </script>

@@ -1,27 +1,20 @@
 <template>
   <div id="app">
-    <RecipeListingComponent hello="recepies" />
+    <RecipeListingPage />
   </div>
 </template>
 
 <script>
-import RecipeListingComponent from './components/recipeListingComponent.vue'
+import RecipeListingPage from './RecipeListingPage.vue'
 export default {
-  name: 'App',
+  name: 'app',
   components: {
 
-    RecipeListingComponent
+    RecipeListingPage
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
