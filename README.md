@@ -1,5 +1,13 @@
 # vueapp
 
+## Clone project or download project
+
+for cloning:
+git clone https://github.com/FrontEndVetle/Noroff-VueApp.git
+cd into folder
+```
+npm install
+
 ## Project setup
 ```
 npm install
