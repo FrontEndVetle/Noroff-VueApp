@@ -19,7 +19,33 @@
 
 <script>
 export default {
-    name: 'RecipeListingComponent',
-    props: ['name', 'link', 'ingredients', 'img'],
+  name: 'RecipeListingComponent',
+  props: {
+      title: String,
+      thumbnail: String,
+      link: String,
+      ingredients: Array
+  }
 }
 </script>
+
+<style scoped>
+h1 {
+    font-size : 20px;
+
+}
+h2 {
+    font-size : 18px;
+
+}
+
+.card{
+    border: 2px solid green;
+
+}
+a {
+    border: 2px solid red;
+    margin: 5px;
+    padding: 5px;
+}
+</style>
