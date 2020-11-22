@@ -1,21 +1,17 @@
 <template>
-  <div id="app">
-    <RecipeList />
-
+  <div id="app" class="container">
+    <RecipeListingPage />
   </div>
 </template>
 
 <script>
-import RecipeList from './components/RecipeListingComponent.vue'
-export default {
-  name: 'App',
-  components: {
+import RecipeListingPage from './RecipeListingPage';
 
-    RecipeList
+export default {
+  name: 'app',
+  components: {
+    RecipeListingPage
   }
 }
 </script>
 
-<style>
-
-</style>
